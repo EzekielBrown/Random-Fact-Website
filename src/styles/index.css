@@ -1,0 +1,73 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+  }
+
+  *, *:before, *:after {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+  }
+  
+body {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+    background: white;
+    
+}
+
+h1, h2 {
+    display: inline-block;
+    
+}
+
+
+h2 {
+    font-size: 2rem;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+}
+
+/*              Button              */
+
+
+.button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    overflow: hidden;
+    text-decoration: none;
+    font-size: 6rem;
+    outline: none;
+    color: #FFF;
+    background: transparent;
+    font-family: 'raleway', sans-serif;
+}
+
+span:after{
+    content:'FACTS';
+}
+span:hover:after{
+    content:'ENTER';
+}
+
+/*              Footer              */
+
+p {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  font-family: sans-serif;
+  font-weight: 100;
+  color: rgb(218, 218, 218);
+  
+}
