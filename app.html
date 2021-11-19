@@ -14,16 +14,41 @@
     <body>
       <nav>
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo center">Logo</a>
-          <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">JavaScript</a></li>
+          <a href="index.html" class="brand-logo center"><img src="/src/img/factstitle.svg" alt="HTML tutorial" style="height:65px;" id="title"></a>
+
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="active"><a href="#">Facts</a></li>
+          </ul>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="active"><a href="#">Login</a></li>
           </ul>
         </div>
-        
+
+        <!--                        Facts Generator                        -->
+
+        <div class="container">
+            <!-- Quote to be Displayed Here -->
+          <h1>
+            <span class="fact" id="fact"></span>
+          </h1>
+          <!-- Author to be Displayed Here -->
+          <p class="author" id="author"></p>
+
+          <hr/>
+          <div class="buttons">
+              <!--Button to tweet the quote -->
+              <a class="twitter" id="tweet" href="https://twitter.com/intent/tweet?text=Greetings" data-size="large" target="_blank" rel="noopener noreferrer"><i class="material-icons">share</i></a>
+
+
+              <button class="next" onclick="getNewQuote()">Another Fact</button>
+          </div>
+        </div>
+
+
+
       </nav>    
 
       <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="/src/scripts/app.js"></script>
     </body>
 </html>

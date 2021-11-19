@@ -20,44 +20,15 @@ body {
     
 }
 
-h1, h2 {
-    display: inline-block;
-    
-}
-
-
-h2 {
-    font-size: 2rem;
-    transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
+#title:hover {   
+    content: url('/src/img/entertitle.svg');
 }
 
 /*              Button              */
 
 
-.button {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    border: none;
-    overflow: hidden;
-    text-decoration: none;
-    font-size: 6rem;
-    outline: none;
-    color: #FFF;
-    background: transparent;
-    font-family: 'raleway', sans-serif;
-}
 
-span:after{
-    content:'FACTS';
-}
-span:hover:after{
-    content:'ENTER';
-}
+
 
 /*              Footer              */
 
