@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="src/styles/app.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
- 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
       <nav>
@@ -18,36 +18,33 @@
 
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="active"><a href="#">Facts</a></li>
-          </ul>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li class="active"><a href="#">Login</a></li>
+            <li class="active"><a href="/login.html">Login</a></li>
           </ul>
         </div>
-
+      </nav>
         <!--                        Facts Generator                        -->
 
         <div class="container">
-            <!-- Quote to be Displayed Here -->
-          <h1>
-            <span class="fact" id="fact"></span>
-          </h1>
-          <!-- Author to be Displayed Here -->
-          <p class="author" id="author"></p>
 
+          <p id="factual"></p>
+          <p2 id="source"></p2>       
           <hr/>
           <div class="buttons">
-              <!--Button to tweet the quote -->
-              <a class="twitter" id="tweet" href="https://twitter.com/intent/tweet?text=Greetings" data-size="large" target="_blank" rel="noopener noreferrer"><i class="material-icons">share</i></a>
+            <div>              
+              <a class="waves-effect waves-light btn-floating btn-large social twitter light-blue">
+              <i class="fa fa-twitter"></i>Share on Twitter</a>
+
+              <a class="waves-effect waves-light btn-floating btn-large grey">
+              <i class="fa fa-heart"></i>Fav</a>
+
+              <a class="waves-effect waves-light btn-floating btn-large grey">
+                <i class="fa fa-thumbs-up"></i>Like</a>
+            </div>
 
 
-              <button class="next" onclick="getNewQuote()">Another Fact</button>
+              <button class="waves-effect waves-light btn blue-grey darken-4 btn-large " onclick="getNewFact()">Another Fact</button>
           </div>
         </div>
-
-
-
-      </nav>    
-
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript" src="/src/scripts/app.js"></script>
     </body>

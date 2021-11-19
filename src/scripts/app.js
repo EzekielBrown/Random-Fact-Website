@@ -1,37 +1,45 @@
-const text=document.getElementById("fact");
-const author=document.getElementById("author");
-const tweetButton=document.getElementById("tweet");
+const facts = [
+	{ 
+		"fact" : "The longest wedding veil was longer than 63 football fields", 
+		"source" : "n/a" 
+	},
+	{
+		"fact" : "McDonald’s once made bubblegum-flavored broccoli", 
+		"source" : "n/a"
+	},
+	{
+		"fact" : "The first oranges weren’t orange", 
+		"source" : "n/a"
+	},
+	{
+		"fact" : "A cow-bison hybrid is called a “beefalo”", 
+		"source" : "n/a"
+	},
+	{
+		"fact" : "Scotland has 421 words for “snow”", 
+		"source" : "n/a"
+	},
+	{
+		"fact" : "Octopuses lay 56,000 eggs at a time", 
+		"source" : "n/a"
+	},
+	{
+		"fact" : "Cats have fewer toes on their back paws", 
+		"source" : "n/a"
+	},
+	{
+		"fact" : "The current American flag was designed by a high school student", 
+		"source" : "n/a"
+	}
+]
 
-const getNewQuote = async () =>
-{
-    //api for quotes
-    var url="https://type.fit/api/quotes";    
-
-    // fetch the data from api
-    const response=await fetch(url);
-    console.log(typeof response);
-    //convert response to json and store it in quotes array
-    const allQuotes = await response.json();
-
-    // Generates a random number between 0 and the length of the quotes array
-    const indx = Math.floor(Math.random()*allQuotes.length);
-
-    //Store the quote present at the randomly generated index
-    const fact=allQuotes[indx].text;
-
-    //Store the author of the respective quote
-    const auth=allQuotes[indx].author;
-
-    if(auth==null)
-    {
-        author = "Anonymous";
-    }
-
-    //function to dynamically display the quote and the author
-    text.innerHTML=fact;
-    author.innerHTML="~ "+auth;
-
-    //tweet the quote
-    tweetButton.href="https://twitter.com/intent/tweet?text="+fact+" ~ "+auth;
+function randomFact() {
+  let random = facts[Math.floor(Math.random() * facts.length)];
+  factual.innerText = `${random.fact}.`;
+  source.innerText = `source: ${random.source}`;
 }
-getNewQuote();
+
+
+randomFact();
+
+document.querySelector("button").addEventListener('click', randomFact)

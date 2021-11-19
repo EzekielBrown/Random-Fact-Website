@@ -4,8 +4,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>still.Login</title>
+    <link rel="stylesheet" href="src/styles/login.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
-    
+    <div class="container">
+        <div class="col logo-login"><a href="index.html" class="brand-logo center"><img src="/src/img/logintitle.svg" alt="login" style="height:65px;" id="title"></a></div>
+        <div class="input-field col s6">
+            <input id="user_name" type="text" class="validate">
+            <label for="first_name">Username</label>
+        </div>
+        
+        <div class="input-field col s12">
+            <input id="password" type="password" class="validate">
+            <label for="password">Password</label>
+        </div>
+        
+        <div class="input-field col s12">
+            
+            <span class="helper-text" data-error="wrong" data-success="right"><a href="#">Forgot Passowrd?</a></span>
+        </div>
+        <button class="waves-effect waves-light btn blue-grey darken-4 btn-large " onclick="getNewFact()">Submit</button>
+    </div>
 </body>
 </html>
